@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakthi Sadhana | UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio of Sakthi Sadhana, a UI/UX Designer specializing in intuitive web and mobile experiences, wireframing, prototyping and user-centered design." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#F5F5F2',
+            ink: '#111111',
+            muted: '#6B6B6B',
+            line: '#DDDDD8',
+            accent: '#315CFF',
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <!-- ============ SKIP LINK ============ -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-transparent transition-all duration-300">
+    <nav class="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 h-20" aria-label="Primary">
+      <a href="#top" class="text-lg font-bold tracking-tight">Sakthi Sadhana</a>
+
+      <ul class="hidden md:flex items-center gap-10 text-[13px] font-semibold tracking-wide">
+        <li><a href="#work" class="nav-link" data-nav>WORK</a></li>
+        <li><a href="#about" class="nav-link" data-nav>ABOUT</a></li>
+        <li><a href="#experience" class="nav-link" data-nav>EXPERIENCE</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>SKILLS</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>CONTACT</a></li>
+      </ul>
+
+      <a href="#contact"
+        class="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide border border-ink px-5 py-2.5 rounded-full hover:bg-ink hover:text-bg transition-colors duration-300">
+        LET'S TALK
+      </a>
+
+      <button id="menuBtn" class="md:hidden flex flex-col gap-[5px] w-8 h-8 items-center justify-center"
+        aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="block w-6 h-[2px] bg-ink transition-transform duration-300" id="barTop"></span>
+        <span class="block w-6 h-[2px] bg-ink transition-opacity duration-300" id="barMid"></span>
+        <span class="block w-6 h-[2px] bg-ink transition-transform duration-300" id="barBot"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-bg border-t border-line">
+      <ul class="flex flex-col px-6 py-6 gap-5 text-sm font-semibold tracking-wide">
+        <li><a href="#work" class="nav-link-mobile" data-nav>WORK</a></li>
+        <li><a href="#about" class="nav-link-mobile" data-nav>ABOUT</a></li>
+        <li><a href="#experience" class="nav-link-mobile" data-nav>EXPERIENCE</a></li>
+        <li><a href="#skills" class="nav-link-mobile" data-nav>SKILLS</a></li>
+        <li><a href="#contact" class="nav-link-mobile" data-nav>CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="relative min-h-[100vh] flex items-center pt-28 pb-16 md:pt-20 overflow-hidden">
+
+      <!-- background watermark type -->
+      <p class="watermark select-none pointer-events-none" aria-hidden="true">
+        BUILD<br>WITH<br>PURPOSE
+      </p>
+
+      <div
+        class="max-w-[1400px] w-full mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 md:gap-8 items-center relative">
+
+        <!-- Text column -->
+        <div class="order-1 relative z-10">
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-6">Software Developer</p>
+
+          <h1 class="reveal hero-heading font-extrabold tracking-tight mb-8">
+            Building modern web<br>
+            applications with<br>
+            React & JavaScript.
+          </h1>
+
+          <p class="reveal text-base md:text-lg text-muted max-w-md mb-10 leading-relaxed">
+            I'm Sakthi Sadhana, a Software Developer focused on creating intuitive, accessible and engaging web and
+            mobile
+            experiences.
+          </p>
+
+          <div class="reveal flex flex-wrap items-center gap-4">
+            <a href="#work"
+              class="inline-flex items-center gap-2 bg-ink text-bg text-[13px] font-semibold tracking-wide px-7 py-4 rounded-full hover:bg-accent transition-colors duration-300">
+              VIEW MY WORK
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 border border-ink text-[13px] font-semibold tracking-wide px-7 py-4 rounded-full hover:bg-ink hover:text-bg transition-colors duration-300">
+              LET'S TALK
+            </a>
+          </div>
+        </div>
+
+        <!-- Portrait column -->
+        <div class="order-2 relative flex justify-center md:justify-end">
+          <div
+            class="reveal portrait-frame relative rounded-[2rem] overflow-hidden border border-line shadow-[0_1px_0_rgba(0,0,0,0.04)] h-[750px]">
+            <img src="assets/sadhana.jpeg" alt="Sakthi Sadhana — Software Developer"
+              class="w-full h-full object-cover object-center portrait-img"
+              onerror="this.closest('.portrait-frame').classList.add('portrait-fallback')" />
+            <div class="portrait-fallback-content" aria-hidden="true">
+              <span>SAKTHI SADHANA</span>
+            </div>
+          </div>
+
+          <!-- Floating labels -->
+          <span class="float-label float-label--1 reveal">React.js</span>
+          <span class="float-label float-label--2 reveal">SQL Database</span>
+          <span class="float-label float-label--3 reveal">Python</span>
+
+          <!-- Vertical location text -->
+          <p class="vertical-text reveal" aria-hidden="false">BASED IN TIRUPUR, INDIA</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="border-t border-line py-24 md:py-32">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+
+        <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-6">
+          ABOUT ME
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+
+          <h2 class="reveal text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
+            Building responsive web applications with clean code and thoughtful design.
+          </h2>
+
+          <div class="reveal">
+
+            <p class="text-muted text-base md:text-lg leading-relaxed mb-10 max-w-md">
+              I'm a Computer Science and Design student with hands-on experience
+              building responsive and functional web applications using React.js,
+              JavaScript, HTML5, CSS3 and Bootstrap.
+            </p>
+
+            <p class="text-muted text-base md:text-lg leading-relaxed mb-10 max-w-md">
+              I also work with Node.js, Express.js and PostgreSQL to build
+              CRUD-driven applications and REST APIs. My UI/UX background helps me
+              create interfaces that are clean, accessible and user-friendly.
+            </p>
+
+            <ul class="grid grid-cols-2 gap-x-8 gap-y-4 max-w-md">
+              <li class="about-chip">React.js</li>
+              <li class="about-chip">JavaScript</li>
+              <li class="about-chip">HTML5</li>
+              <li class="about-chip">CSS3</li>
+              <li class="about-chip">Node.js</li>
+              <li class="about-chip">Express.js</li>
+              <li class="about-chip">PostgreSQL</li>
+              <li class="about-chip">REST APIs</li>
+              <li class="about-chip">JWT Authentication</li>
+              <li class="about-chip">Git & GitHub</li>
+              <li class="about-chip">Postman</li>
+              <li class="about-chip">Figma</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ============ SELECTED WORK ============ -->
+    <section id="work" class="border-t border-line py-24 md:py-32">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+          <div>
+            <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-6">
+              SELECTED WORK
+            </p>
+
+            <h2 class="reveal text-3xl md:text-5xl font-extrabold tracking-tight max-w-xl">
+              Web applications built with modern technologies and thoughtful interfaces.
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-20 md:gap-28">
+
+          <!-- Project 01 -->
+          <article class="reveal project-card group">
+            <div class="grid md:grid-cols-[1fr_1.1fr] gap-8 md:gap-14 items-center">
+
+              <div class="order-2 md:order-1">
+
+                <span class="text-sm font-semibold text-muted">
+                  01
+                </span>
+
+                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 mb-3">
+                  TASKFLOW
+                </h3>
+
+                <p class="text-[13px] font-semibold tracking-wide text-accent mb-5">
+                  FULL-STACK WEB APPLICATION
+                </p>
+
+                <p class="text-muted leading-relaxed mb-6 max-w-sm">
+                  A full-stack task management application built to create,
+                  organize, prioritize and track tasks through a responsive
+                  and user-friendly interface.
+                </p>
+
+                <p class="text-sm text-muted mb-8">
+                  React.js &middot; Node.js &middot; Express.js &middot; PostgreSQL
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="about-chip">CRUD APIs</span>
+                  <span class="about-chip">JWT Auth</span>
+                  <span class="about-chip">Responsive UI</span>
+                </div>
+
+                <a href="#" class="case-study-link inline-flex items-center gap-2 text-sm font-semibold">
+                  VIEW PROJECT
+                  <span class="arrow">&rarr;</span>
+                </a>
+
+              </div>
+
+              <div class="order-1 md:order-2 project-image-frame">
+
+                <img src="assets/taskflow.png" alt="TaskFlow task management application preview" class="project-image"
+                  onerror="this.closest('.project-image-frame').classList.add('image-fallback')" />
+
+                <div class="image-fallback-content">
+                  TASKFLOW
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- Project 02 -->
+          <article class="reveal project-card group">
+
+            <div class="grid md:grid-cols-[1.1fr_1fr] gap-8 md:gap-14 items-center">
+
+              <div class="project-image-frame">
+
+                <img src="assets/inventroy.png" alt="InventoryIQ inventory management dashboard preview"
+                  class="project-image"
+                  onerror="this.closest('.project-image-frame').classList.add('image-fallback')" />
+
+                <div class="image-fallback-content">
+                  INVENTORYIQ
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <span class="text-sm font-semibold text-muted">
+                  02
+                </span>
+
+                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 mb-3">
+                  INVENTORYIQ
+                </h3>
+
+                <p class="text-[13px] font-semibold tracking-wide text-accent mb-5">
+                  INVENTORY MANAGEMENT DASHBOARD
+                </p>
+
+                <p class="text-muted leading-relaxed mb-6 max-w-sm">
+                  A responsive inventory management dashboard for tracking
+                  stock levels, categories and order history, with analytics
+                  and low-stock alerts for small businesses.
+                </p>
+
+                <p class="text-sm text-muted mb-8">
+                  React.js &middot; Express.js &middot; PostgreSQL &middot; Chart.js
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="about-chip">REST APIs</span>
+                  <span class="about-chip">PostgreSQL</span>
+                  <span class="about-chip">Chart.js</span>
+                  <span class="about-chip">Responsive UI</span>
+                </div>
+
+                <a href="#" class="case-study-link inline-flex items-center gap-2 text-sm font-semibold">
+                  VIEW PROJECT
+                  <span class="arrow">&rarr;</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+      </aection>
+      <!-- ============ DEVELOPMENT PROCESS ============ -->
+      <section id="process" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-16">
+            HOW I BUILD
+          </p>
+
+          <div class="process-track">
+
+            <!-- Step 01 -->
+            <div class="reveal process-step">
+              <span class="process-num">01</span>
+              <h3 class="process-title">UNDERSTAND</h3>
+              <p class="process-desc">
+                Understand the requirements, users and goals before writing code.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="reveal process-step">
+              <span class="process-num">02</span>
+              <h3 class="process-title">PLAN</h3>
+              <p class="process-desc">
+                Break the problem into features, components and development tasks.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="reveal process-step">
+              <span class="process-num">03</span>
+              <h3 class="process-title">BUILD</h3>
+              <p class="process-desc">
+                Build responsive interfaces and functional features with clean,
+                structured code.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="reveal process-step">
+              <span class="process-num">04</span>
+              <h3 class="process-title">INTEGRATE</h3>
+              <p class="process-desc">
+                Connect front-end interfaces with REST APIs, backend services
+                and databases.
+              </p>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="reveal process-step">
+              <span class="process-num">05</span>
+              <h3 class="process-title">TEST</h3>
+              <p class="process-desc">
+                Debug, test functionality and check responsive behaviour across
+                different screens.
+              </p>
+            </div>
+
+            <!-- Step 06 -->
+            <div class="reveal process-step">
+              <span class="process-num">06</span>
+              <h3 class="process-title">REFINE</h3>
+              <p class="process-desc">
+                Improve performance, usability and code quality based on testing
+                and feedback.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-16">
+            EXPERIENCE
+          </p>
+
+          <div class="flex flex-col">
+
+            <!-- Experience 01 -->
+            <div class="reveal timeline-item">
+
+              <div class="timeline-meta">
+                <p class="timeline-date">
+                  March 2026 &ndash; April 2026
+                </p>
+
+                <p class="timeline-location">
+                  Remote
+                </p>
+              </div>
+
+              <div class="timeline-body">
+
+                <h3 class="timeline-company">
+                  CODSOFT PVT LTD
+                </h3>
+
+                <p class="timeline-role">
+                  Front-End &amp; Design Intern
+                </p>
+
+                <p class="timeline-desc">
+                  Translated product requirements into responsive, functional
+                  web and mobile layouts using HTML, CSS, JavaScript and Figma
+                  prototypes.
+                </p>
+
+                <p class="timeline-desc mt-4">
+                  Built interactive prototypes and wireframes, bridging the gap
+                  between design and development for smoother engineering handoff.
+                </p>
+
+                <p class="timeline-desc mt-4">
+                  Applied visual hierarchy, accessibility and responsive layout
+                  principles across key screens.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-16">
+            TOOLS &amp; SKILLS
+          </p>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Frontend -->
+            <div class="reveal">
+              <h3 class="skills-heading">
+                FRONTEND
+              </h3>
+
+              <ul class="skills-list">
+                <li>React.js</li>
+                <li>JavaScript (ES6)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+
+
+            <!-- Backend -->
+            <div class="reveal">
+              <h3 class="skills-heading">
+                BACKEND
+              </h3>
+
+              <ul class="skills-list">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>REST APIs</li>
+                <li>JWT Authentication</li>
+              </ul>
+            </div>
+
+
+            <!-- Database & Tools -->
+            <div class="reveal">
+              <h3 class="skills-heading">
+                DATABASE &amp; TOOLS
+              </h3>
+
+              <ul class="skills-list">
+                <li>PostgreSQL</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+                <li>Postman</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+
+
+            <!-- Other -->
+            <div class="reveal">
+              <h3 class="skills-heading">
+                OTHER
+              </h3>
+
+              <ul class="skills-list">
+                <li>Debugging &amp; Testing</li>
+                <li>Agile / Scrum Basics</li>
+                <li>Data Structures</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-16">EDUCATION</p>
+
+          <div class="flex flex-col gap-10">
+            <div class="reveal edu-item">
+              <h3 class="edu-school">Erode Sengunthar Engineering College</h3>
+              <p class="edu-degree">B.E. in Computer Science and Design</p>
+              <p class="edu-meta">August 2024 &ndash; May 2028 &middot; CGPA: 8.5 / 10</p>
+            </div>
+            <div class="reveal edu-item">
+              <h3 class="edu-school">Government Higher Secondary School, Iduvampalayam</h3>
+              <p class="edu-degree">Higher Secondary Course</p>
+              <p class="edu-meta">March 2023 &ndash; April 2024 &middot; Percentage: 66%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CERTIFICATIONS ============ -->
+      <section id="certifications" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+          <p class="reveal text-[13px] font-semibold tracking-[0.15em] text-muted mb-16">CERTIFICATIONS &amp;
+            ACHIEVEMENTS
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-10">
+            <div class="reveal cert-item">
+              <h3 class="cert-title">Ashes 1.0 Hackathon</h3>
+              <p class="cert-org">24-hour hackathon organized by Wyntrix</p>
+            </div>
+            <div class="reveal cert-item">
+              <h3 class="cert-title">Novi UI/UX Design Certification</h3>
+              <p class="cert-org">NoviTech R&amp;D Private Limited</p>
+              <p class="cert-date">January 2026 &ndash; February 2026</p>
+            </div>
+            <div class="reveal cert-item">
+              <h3 class="cert-title">UI/UX Workshop</h3>
+              <p class="cert-org">Brand Monk Academy</p>
+              <p class="cert-date">February 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="border-t border-line py-24 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+          <h2 class="reveal text-4xl md:text-6xl font-extrabold tracking-tight leading-[0.95] mb-10 max-w-2xl">
+            Let's create<br>something<br>meaningful.
+          </h2>
+
+          <p class="reveal text-muted text-lg mb-12 max-w-md">
+            Have a project, idea or opportunity? Let's talk.
+          </p>
+
+          <div class="reveal flex flex-wrap items-center gap-4 mb-16">
+            <a href="mailto:msakthisadhana@gmail.com"
+              class="inline-flex items-center gap-2 bg-ink text-bg text-[13px] font-semibold tracking-wide px-7 py-4 rounded-full hover:bg-accent transition-colors duration-300">
+              EMAIL ME
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 border border-ink text-[13px] font-semibold tracking-wide px-7 py-4 rounded-full hover:bg-ink hover:text-bg transition-colors duration-300">
+              LINKEDIN
+            </a>
+          </div>
+
+          <div class="reveal grid sm:grid-cols-3 gap-8 pt-10 border-t border-line max-w-3xl text-sm">
+            <div>
+              <p class="text-muted mb-1">Email</p>
+              <a href="mailto:msakthisadhana@gmail.com"
+                class="font-semibold hover:text-accent transition-colors">msakthisadhana@gmail.com</a>
+            </div>
+            <div>
+              <p class="text-muted mb-1">Phone</p>
+              <a href="tel:+919688341321" class="font-semibold hover:text-accent transition-colors">+91 9688341321</a>
+            </div>
+            <div>
+              <p class="text-muted mb-1">Location</p>
+              <p class="font-semibold">Tirupur, Tamil Nadu</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-line py-12">
+    <div
+      class="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <p class="font-bold">Sakthi Sadhana</p>
+        <p class="text-sm text-muted">Software Developer</p>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-semibold">
+        <a href="https://github.com/Sakthisadhana" target="_blank" rel="noopener noreferrer"
+          class="hover:text-accent transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/sakthisadhana-m-830ba8333/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-accent transition-colors">LinkedIn</a>
+      </div>
+      <p class="text-sm text-muted">&copy; 2026 Sakthi Sadhana</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
